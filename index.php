@@ -1,17 +1,26 @@
 <?php
   require_once("connMysql.php");
-  $pageRow_records = 5; //預設每頁比數
-  $num_pages = 1; //預設頁數
-  if(isset($_GET['page'])){
+  $pageRow_records = 5;
+  //預設頁數
+  $num_pages = 1;
+  //若已經有翻頁，將頁數更新
+  if (isset($_GET['page'])) {
     $num_pages = $_GET['page'];
   }
-  $startRow_records = ($num_pages-1)*$pageRow_records;
-  $query_Recboard = "SELECT * FROM board ORDER BY boardertime DESC";
-  $query_limit_Recboard=$query_Recboard." LIMIT {$startRow_records}, {$pageRow_records}";
-  $RecBoard = $db_link->query($query_limit_Recboard);
-  $all_Recboard = $db_link->query($query_Recboard);
-  $total_records = $all_Recboard->num_rows;
-  $totalPages = ceil($total_records/$pageRow_records);
+  //本頁開始記錄筆數 = (頁數-1)*每頁記錄筆數
+  $startRow_records = ($num_pages -1) * $pageRow_records;
+  //未加限制顯示筆數的SQL敘述句
+  $query_RecBoard = "SELECT * FROM board ORDER BY boardtime DESC";
+  //加上限制顯示筆數的SQL敘述句，由本頁開始記錄筆數開始，每頁顯示預設筆數
+  $query_limit_RecBoard = $query_RecBoard." LIMIT {$startRow_records}, {$pageRow_records}";
+  //以加上限制顯示筆數的SQL敘述句查詢資料到 $RecBoard 中
+  $RecBoard = $db_link->query($query_limit_RecBoard);
+  //以未加上限制顯示筆數的SQL敘述句查詢資料到 $all_RecBoard 中
+  $all_RecBoard = $db_link->query($query_RecBoard);
+  //計算總筆數
+  $total_records = $all_RecBoard->num_rows;
+  //計算總頁數=(總筆數/每頁筆數)後無條件進位。
+  $total_pages = ceil($total_records/$pageRow_records);
 ?>
 <html>
   <head>
