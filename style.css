@@ -1,4 +1,7 @@
-@charset "utf-8";
+*{
+    font-family: "思源黑體";
+    
+}
 #mainRegion {
 	margin-top: 20px;
 	margin-bottom: 10px;
