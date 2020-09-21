@@ -1,11 +1,11 @@
 <?php
   require_once("connMysql.php");
   $pageRow_records = 5; //預設每頁比數
-  $numPages = 1; //預設頁數
+  $num_pages = 1; //預設頁數
   if(isset($_GET['page'])){
-    $numPages = $_GET['page'];
+    $num_pages = $_GET['page'];
   }
-  $startRow_records = ($numPages-1)*$pageRow_records;
+  $startRow_records = ($num_pages-1)*$pageRow_records;
   $query_Recboard = "SELECT * FROM board ORDER BY boardertime DESC";
   $query_limit_Recboard=$query_Recboard." LIMIT {$startRow_records}, {$pageRow_records}";
   $RecBoard = $db_link->query($query_limit_Recboard);
