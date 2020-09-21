@@ -1,18 +1,14 @@
 <?php
 session_start();
-//如果沒有登入Session值或是Session值為空則執行登入動作
 if(!isset($_SESSION["loginMember"]) || ($_SESSION["loginMember"]=="")){
 	if(isset($_POST["username"]) && isset($_POST["passwd"])){
 		require_once("connMysql.php");		
-		//選取儲存帳號密碼的資料表
 		$sql_query = "SELECT * FROM admin";
 		$result = $db_link->query($sql_query);		
-		//取出帳號密碼的值
 		$row_result=$result->fetch_assoc();
 		$username = $row_result["username"];
 		$passwd = $row_result["passwd"];
 		$db_link->close();
-		//比對帳號密碼，若登入成功則進往管理界面，否則就退回主畫面。
 		if(($username==$_POST["username"]) && ($passwd==$_POST["passwd"])){
 			$_SESSION["loginMember"]=$username;
 			header("Location: admin.php");
@@ -21,7 +17,6 @@ if(!isset($_SESSION["loginMember"]) || ($_SESSION["loginMember"]=="")){
 		}
 	}
 }else{
-	//若已經有登入Session值則前往管理界面
 	header("Location: admin.php");
 }
 ?>
