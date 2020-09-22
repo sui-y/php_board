@@ -35,7 +35,6 @@
           <tr>
             <a class="btn btn-outline-dark" href="index.php" role="button">瀏覽留言</a>
             <a class="btn btn-outline-dark" href="post.php" role="button">我要留言</a>
-            <td width="15"><img name="board_r1_c8" width="15" height="36" border="0" alt=""></td>
           </tr>
         </table></td>
     </tr>
@@ -90,9 +89,7 @@
     <tr>
       <td><table align="left" border="0" cellpadding="0" cellspacing="0" width="700">
           <tr>
-            <td width="15"><img name="board_r4_c1" src="images/board_r4_c1.jpg" width="15" height="31" border="0" alt=""></td>
             <a class="btn btn-outline-dark" href="login.php" role="button">登入管理</a>
-            <td width="15"><img name="board_r4_c8" src="images/board_r4_c8.jpg" width="15" height="31" border="0" alt=""></td>
           </tr>
         </table></td>
     </tr>
