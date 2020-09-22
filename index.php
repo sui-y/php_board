@@ -31,17 +31,14 @@
   <body bgcolor="#ffffff">
   <table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
     <tr>
-      <td><table align="left" border="0" cellpadding="0" cellspacing="0" width="700">
           <tr>
-            <td><img name="board_r1_c1" src="images/board_r1_c1.jpg" width="465" height="36" border="0" alt=""></td>
-            <td><a href="index.php"><img name="board_r1_c5" src="images/read.jpg" width="110" height="36" border="0" alt="瀏覽留言"></a></td>
-            <td><a href="post.php"><img name="board_r1_c7" src="images/post.jpg" width="110" height="36" border="0" alt="我要留言"></a></td>
-            <td width="15"><img name="board_r1_c8" src="images/board_r1_c8.jpg" width="15" height="36" border="0" alt=""></td>
+            <td><a href="index.php"><img name="board_r1_c5" width="110" height="36" border="0" alt="瀏覽留言"></a></td>
+            <td><a href="post.php"><img name="board_r1_c7" width="110" height="36" border="0" alt="我要留言"></a></td>
+            <td width="15"><img name="board_r1_c8" width="15" height="36" border="0" alt=""></td>
           </tr>
         </table></td>
     </tr>
     <tr>
-      <td><img name="board_r2_c1" src="images/board_r2_c1.jpg" width="700" height="28" border="0" alt=""></td>
     </tr>
     <tr>
       <td background="images/board_r3_c1.jpg"><div id="mainRegion">
