@@ -105,7 +105,6 @@ $stmt->fetch();
         <tr>
           <td width="15"><img name="admin_r4_c1" src="images/admin_r4_c1.jpg" width="15" height="31" border="0" alt=""></td>
           <td background="images/admin_botbg.jpg"><a href="?logout=true"><img name="admin_r4_c2" src="images/logout.jpg" width="77" height="31" border="0" alt="登出管理"></a></td>
-          <td align="right" valign="top" background="images/admin_botbg.jpg" class="trademark">© 2016 eHappy Studio All Rights Reserved. </td>
           <td width="15"><img name="admin_r4_c8" src="images/admin_r4_c8.jpg" width="15" height="31" border="0" alt=""></td>
         </tr>
       </table></td>

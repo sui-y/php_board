@@ -73,7 +73,6 @@ if(!isset($_SESSION["loginMember"]) || ($_SESSION["loginMember"]=="")){
     <table align="left" border="0" cellpadding="0" cellspacing="0" width="700">
         <tr>
           <td width="15"><img name="board_r4_c1" src="images/board_r4_c1.jpg" width="15" height="31" border="0" alt=""></td>
-          <td align="center" valign="top" background="images/botbg.jpg" class="trademark">© 2016 eHappy Studio All Rights Reserved. </td>
           <td width="15"><img name="board_r4_c8" src="images/board_r4_c8.jpg" width="15" height="31" border="0" alt=""></td>
         </tr>
     </table>

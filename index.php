@@ -50,9 +50,9 @@
             <tr valign="top">
               <td width="60" align="center" class="underline">
                 <?php if($row_RecBoard["boardsex"]=="男"){;?>
-                <img src="images/male.png" alt="我是男生" width="49" height="49">
+                  <img src="images/male.png" alt="我是男生" width="49" height="49">
                 <?php }else{?>
-                <img src="images/female.png" alt="我是女生" width="49" height="49">
+                  <img src="images/female.png" alt="我是女生" width="49" height="49">
                 <?php }?>
                 <br>
                 <span class="postname"><?php echo $row_RecBoard["boardname"];?></span>
