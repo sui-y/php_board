@@ -78,59 +78,46 @@ if(isset($_POST["action"])&&($_POST["action"]=="add")){
     </script>
   </head>
   <body bgcolor="#ffffff">
-  <table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+  <nav class="navbar">
+    <a class="navbar-brand" href="#">留言板</a>
+    <div class="collapse.navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a href="index.php" class="viewText nav-item">瀏覽留言</a>
+        <a href="post.php" class="writeText nav-item">我要留言</a>
+      </div>
+    </div>
+    <a class="btn btn-outline-dark loginButton" href="login.php" role="button">登入管理</a>
+  </nav>
+  <table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="table">
     <tr>
-      <td><table align="left" border="0" cellpadding="0" cellspacing="0" width="700">
-          <tr>
-            <td><img name="board_r1_c1" src="images/board_r1_c1.jpg" width="465" height="36" border="0" alt=""></td>
-            <td><a href="index.php"><img name="board_r1_c5" src="images/read.jpg" width="110" height="36" border="0" alt="瀏覽留言"></a></td>
-            <td><a href="post.php"><img name="board_r1_c7" src="images/post.jpg" width="110" height="36" border="0" alt="我要留言"></a></td>
-            <td width="15"><img name="board_r1_c8" src="images/board_r1_c8.jpg" width="15" height="36" border="0" alt=""></td>
+      <form action="" method="post" name="formPost" id="formPost" onSubmit="return checkForm();">
+        <table width="90%" border="0" align="center" cellpadding="4" cellspacing="0">
+          <tr valign="top">
+            <td width="80" align="center"><img src="images/talk.gif" alt="我要留言" width="80" height="80"><span class="heading">留言</span></td>
+            <td>
+        <p>標題<input type="text" name="boardsubject" id="boardsubject"></p>
+              <p>姓名<input type="text" name="boardname" id="boardname"></p>
+              <p>性別
+                <input name="boardsex" type="radio" id="radio" value="男" checked>男
+                <input type="radio" name="boardsex" id="radio2" value="女">女
+              </p>
+              <p>郵件<input type="text" name="boardmail" id="boardmail"></p>
+              <p>網站<input type="text" name="boardweb" id="boardweb"></p>
+            </td>
+            <td align="right">
+              <p><textarea name="boardcontent" id="boardcontent" cols="40" rows="10"></textarea></p>
+            </td>
           </tr>
-        </table></td>
-    </tr>
-    <tr>
-      <td><img name="board_r2_c1" src="images/board_r2_c1.jpg" width="700" height="28" border="0" alt=""></td>
-    </tr>
-    <tr>
-      <td background="images/board_r3_c1.jpg"><div id="mainRegion">
-          <form action="" method="post" name="formPost" id="formPost" onSubmit="return checkForm();">
-            <table width="90%" border="0" align="center" cellpadding="4" cellspacing="0">
-              <tr valign="top">
-                <td width="80" align="center"><img src="images/talk.gif" alt="我要留言" width="80" height="80"><span class="heading">留言</span></td>
-                <td>
-            <p>標題<input type="text" name="boardsubject" id="boardsubject"></p>
-                  <p>姓名<input type="text" name="boardname" id="boardname"></p>
-                  <p>性別
-                    <input name="boardsex" type="radio" id="radio" value="男" checked>男
-                    <input type="radio" name="boardsex" id="radio2" value="女">女
-                  </p>
-                  <p>郵件<input type="text" name="boardmail" id="boardmail"></p>
-                  <p>網站<input type="text" name="boardweb" id="boardweb"></p>
-                </td>
-                <td align="right">
-                  <p><textarea name="boardcontent" id="boardcontent" cols="40" rows="10"></textarea></p>
-                </td>
-              </tr>
-              <tr valign="top">
-                <td colspan="3" align="center" valign="middle">
-            <input name="action" type="hidden" id="action" value="add">
-                  <input type="submit" name="button" id="button" value="送出留言">
-                  <input type="reset" name="button2" id="button2" value="重設資料">
-                  <input type="button" name="button3" id="button3" value="回上一頁" onClick="window.history.back();"></td>
-              </tr>
-            </table>
-          </form>
-        </div></td>
-    </tr>
-    <tr>
-      <td><table align="left" border="0" cellpadding="0" cellspacing="0" width="700">
-          <tr>
-            <td width="15"><img name="board_r4_c1" src="images/board_r4_c1.jpg" width="15" height="31" border="0" alt=""></td>
-            <td background="images/botbg.jpg"><a href="login.php"><img name="board_r4_c2" src="images/login.jpg" width="77" height="31" border="0" alt="登入管理"></a></td>
-            <td width="15"><img name="board_r4_c8" src="images/board_r4_c8.jpg" width="15" height="31" border="0" alt=""></td>
+          <tr valign="top">
+            <td colspan="3" align="center" valign="middle">
+        <input name="action" type="hidden" id="action" value="add">
+              <input type="submit" name="button" class="btn btn-outline-dark" value="送出留言">
+              <input type="reset" name="button2" class="btn btn-outline-dark" value="重設資料">
+              <input type="button" name="button3" class="btn btn-outline-dark" value="回上一頁" onClick="window.history.back();"></td>
           </tr>
-        </table></td>
+        </table>
+      </form>
+    </div></td>
     </tr>
   </table>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

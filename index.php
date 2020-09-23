@@ -30,16 +30,14 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   </head>
   <body bgcolor="#ffffff">
+  <nav class="navbar">
+    <a class="navbar-brand" href="#">留言板</a>
+    <a href="index.php" class="viewText" role="button">瀏覽留言</a>
+    <a href="post.php" class="writeText" role="button">我要留言</a>
+    <a class="btn btn-outline-dark loginButton" href="login.php" role="button">登入管理</a>
+  </nav>
   <table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
-    <tr>
-          <tr>
-            <a class="btn btn-outline-dark" href="index.php" role="button">瀏覽留言</a>
-            <a class="btn btn-outline-dark" href="post.php" role="button">我要留言</a>
-          </tr>
-        </table></td>
-    </tr>
-    <tr>
-    </tr>
+
     <tr>
       <td background="images/board_r3_c1.jpg"><div id="mainRegion">
           <?php	while($row_RecBoard=$RecBoard->fetch_assoc()){ ?>
@@ -86,13 +84,7 @@
           </table>
         </div></td>
     </tr>
-    <tr>
-      <td><table align="left" border="0" cellpadding="0" cellspacing="0" width="700">
-          <tr>
-            <a class="btn btn-outline-dark" href="login.php" role="button">登入管理</a>
-          </tr>
-        </table></td>
-    </tr>
+    
   </table>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
