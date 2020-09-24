@@ -88,13 +88,8 @@ if(isset($_POST["action"])&&($_POST["action"]=="add")){
     </div>
     <a class="btn btn-outline-dark loginButton" href="login.php" role="button">登入管理</a>
   </nav>
-  <table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="table">
-    <tr>
       <form action="" method="post" name="formPost" id="formPost" onSubmit="return checkForm();">
-        <table width="90%" border="0" align="center" cellpadding="4" cellspacing="0">
-          <tr valign="top">
-            <td width="80" align="center"><img src="images/talk.gif" alt="我要留言" width="80" height="80"><span class="heading">留言</span></td>
-            <td>
+          <img src="images/talk.gif" alt="我要留言" width="80" height="80"><span class="heading">留言</span>
         <p>標題<input type="text" name="boardsubject" id="boardsubject"></p>
               <p>姓名<input type="text" name="boardname" id="boardname"></p>
               <p>性別
@@ -103,22 +98,13 @@ if(isset($_POST["action"])&&($_POST["action"]=="add")){
               </p>
               <p>郵件<input type="text" name="boardmail" id="boardmail"></p>
               <p>網站<input type="text" name="boardweb" id="boardweb"></p>
-            </td>
-            <td align="right">
               <p><textarea name="boardcontent" id="boardcontent" cols="40" rows="10"></textarea></p>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td colspan="3" align="center" valign="middle">
         <input name="action" type="hidden" id="action" value="add">
               <input type="submit" name="button" class="btn btn-outline-dark" value="送出留言">
               <input type="reset" name="button2" class="btn btn-outline-dark" value="重設資料">
-              <input type="button" name="button3" class="btn btn-outline-dark" value="回上一頁" onClick="window.history.back();"></td>
-          </tr>
-        </table>
+              <input type="button" name="button3" class="btn btn-outline-dark" value="回上一頁" onClick="window.history.back();">
       </form>
-    </div></td>
-    </tr>
+    </div>
   </table>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>

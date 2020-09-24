@@ -32,8 +32,18 @@
   <body bgcolor="#ffffff">
   <nav class="navbar">
     <a class="navbar-brand" href="#">留言板</a>
-    <a href="index.php" class="viewText" role="button">瀏覽留言</a>
-    <a href="post.php" class="writeText" role="button">我要留言</a>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.php">瀏覽留言</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="post.php">我要留言</a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <a class="btn btn-outline-dark loginButton" href="login.php" role="button">登入管理</a>
   </nav>
   <table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
